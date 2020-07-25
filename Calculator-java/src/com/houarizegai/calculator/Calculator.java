@@ -79,7 +79,7 @@ public class Calculator {
         btnSwitchThemes.setBackground(Color.GREEN.darker());
         btnSwitchThemes.setForeground(Color.WHITE);
         btnSwitchThemes.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        btnSwitchThemes.addActionListener(event -> onSwitchTheme());
+        
         window.add(btnSwitchThemes);
 
         btnSwitchToScientificMode = new JButton();
@@ -577,89 +577,7 @@ public class Calculator {
         inText.setFont(inText.getFont().deriveFont(Font.PLAIN));
     }
 
-    private void onSwitchTheme() {
-        if (isToggleColorSelected) {
-            btnSwitchThemes.setText("Toggle colors");
-            btnSwitchThemes.setBackground(Color.GREEN.darker());
-            btnSwitchThemes.setForeground(Color.WHITE);
-            btnC.setBackground(null);
-            btnBack.setBackground(null);
-            btnMod.setBackground(null);
-            btnDiv.setBackground(null);
-            btnMul.setBackground(null);
-            btnSub.setBackground(null);
-            btnAdd.setBackground(null);
-            btnRoot.setBackground(null);
-            btnLog.setBackground(null);
-            btnPower.setBackground(null);
-            btnEqual.setBackground(null);
-            btn0.setBackground(null);
-            btn1.setBackground(null);
-            btn2.setBackground(null);
-            btn3.setBackground(null);
-            btn4.setBackground(null);
-            btn5.setBackground(null);
-            btn6.setBackground(null);
-            btn7.setBackground(null);
-            btn8.setBackground(null);
-            btn9.setBackground(null);
-            btnPoint.setBackground(null);
-
-            btnC.setForeground(Color.BLACK);
-            btnBack.setForeground(Color.BLACK);
-            btnMod.setForeground(Color.BLACK);
-            btnDiv.setForeground(Color.BLACK);
-            btnMul.setForeground(Color.BLACK);
-            btnSub.setForeground(Color.BLACK);
-            btnAdd.setForeground(Color.BLACK);
-            btnEqual.setForeground(Color.BLACK);
-            btnLog.setForeground(Color.BLACK);
-            btnPower.setForeground(Color.BLACK);
-            btnRoot.setForeground(Color.BLACK);
-
-            isToggleColorSelected = false;
-        } else {
-            btnSwitchThemes.setText("Untoggle colors");
-            btnSwitchThemes.setBackground(null);
-            btnSwitchThemes.setForeground(Color.BLACK);
-            btnC.setBackground(Color.RED);
-            btnBack.setBackground(Color.ORANGE);
-            btnMod.setBackground(Color.GREEN);
-            btnDiv.setBackground(Color.PINK);
-            btnMul.setBackground(Color.PINK);
-            btnSub.setBackground(Color.PINK);
-            btnAdd.setBackground(Color.PINK);
-            btnRoot.setBackground(Color.PINK);
-            btnLog.setBackground(Color.PINK);
-            btnPower.setBackground(Color.PINK);
-            btnEqual.setBackground(Color.BLUE);
-            btn0.setBackground(Color.WHITE);
-            btn1.setBackground(Color.WHITE);
-            btn2.setBackground(Color.WHITE);
-            btn3.setBackground(Color.WHITE);
-            btn4.setBackground(Color.WHITE);
-            btn5.setBackground(Color.WHITE);
-            btn6.setBackground(Color.WHITE);
-            btn7.setBackground(Color.WHITE);
-            btn8.setBackground(Color.WHITE);
-            btn9.setBackground(Color.WHITE);
-            btnPoint.setBackground(Color.WHITE);
-
-            btnC.setForeground(Color.WHITE);
-            btnBack.setForeground(Color.WHITE);
-
-            btnMod.setForeground(Color.WHITE);
-            btnDiv.setForeground(Color.WHITE);
-            btnMul.setForeground(Color.WHITE);
-            btnSub.setForeground(Color.WHITE);
-            btnAdd.setForeground(Color.WHITE);
-            btnEqual.setForeground(Color.WHITE);
-            btnLog.setForeground(Color.WHITE);
-            btnPower.setForeground(Color.WHITE);
-            btnRoot.setForeground(Color.WHITE);
-            isToggleColorSelected = true;
-        }
-    }
+    
 
     private void onShowScientificMode() {
         if (isScientificMode) {
